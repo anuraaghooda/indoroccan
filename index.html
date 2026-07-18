@@ -1850,8 +1850,25 @@ function smoothScrollTo(id){ var el=document.getElementById(id); if(el) el.scrol
 function setQuery(text){ var ta=document.getElementById('intelQuery'); if(ta){ta.value=text;ta.focus();} }
 
 // ============ INTELLIGENCE ENGINE (Anthropic Claude API) ============
+var INTEL_MAINTENANCE_MODE = true;
+
 async function askIntelligence(){
   var query=document.getElementById('intelQuery').value.trim(); if(!query)return;
+
+  if(INTEL_MAINTENANCE_MODE){
+    document.getElementById('intelAsk').disabled=true;
+    document.getElementById('intelLoading').style.display='flex';
+    document.getElementById('intelResult').classList.remove('show');
+    setTimeout(function(){
+      document.getElementById('intelLoading').style.display='none';
+      document.getElementById('intelAsk').disabled=false;
+      var resultEl = document.getElementById('intelResult');
+      resultEl.innerHTML = '<div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#E87722;margin-bottom:0.5rem;font-weight:700;">Answer</div><div style="line-height:1.6;">The Intelligence Engine is temporarily undergoing scheduled maintenance and will be back online shortly. In the meantime, feel free to reach out directly at <a href="mailto:hello@indoroccan.com" style="color:#E87722;">hello@indoroccan.com</a> with any questions about India\u2013Morocco developments.</div>';
+      resultEl.classList.add('show');
+    }, 700);
+    return;
+  }
+
   var lang=document.getElementById('intelLang').value;
   var count=document.getElementById('intelCount').value;
   document.getElementById('intelAsk').disabled=true;
@@ -1957,5 +1974,6 @@ document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('a[href^="#"]').forEach(function(a){if(!a.getAttribute('onclick')){a.addEventListener('click',function(e){var id=this.getAttribute('href').slice(1);var target=document.getElementById(id);if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}});}});
 });
 </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ad019de706f44371807bc695ad03e078"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
