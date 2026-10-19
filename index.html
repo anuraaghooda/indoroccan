@@ -35,6 +35,21 @@
     --green: #1A5C38;
     --white: #FFFFFF;
     --border: rgba(11,27,58,0.1);
+    --pattern-light: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='60'%20height='60'%20viewBox='0%200%2060%2060'%3E%3Cg%20fill='none'%20stroke='rgba(11,27,58,0.055)'%20stroke-width='1'%3E%3Crect%20x='10'%20y='10'%20width='28.3'%20height='28.3'/%3E%3Crect%20x='10'%20y='10'%20width='28.3'%20height='28.3'%20transform='rotate(45%2024.15%2024.15)'/%3E%3C/g%3E%3C/svg%3E");
+    --pattern-dark: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='60'%20height='60'%20viewBox='0%200%2060%2060'%3E%3Cg%20fill='none'%20stroke='rgba(232,119,34,0.09)'%20stroke-width='1'%3E%3Crect%20x='10'%20y='10'%20width='28.3'%20height='28.3'/%3E%3Crect%20x='10'%20y='10'%20width='28.3'%20height='28.3'%20transform='rotate(45%2024.15%2024.15)'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .zellige-divider {
+    height: 14px;
+    background-image:
+      linear-gradient(135deg, var(--saffron) 25%, transparent 25%),
+      linear-gradient(225deg, var(--saffron) 25%, transparent 25%),
+      linear-gradient(45deg, var(--saffron) 25%, transparent 25%),
+      linear-gradient(315deg, var(--saffron) 25%, transparent 25%);
+    background-position: 7px 0, 7px 0, 0 0, 0 0;
+    background-size: 14px 14px;
+    background-repeat: repeat-x;
+    opacity: 0.4;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -104,7 +119,9 @@
   /* HERO */
   .hero {
     min-height: 100vh;
-    background: var(--navy);
+    background-color: var(--navy);
+    background-image: var(--pattern-dark);
+    background-repeat: repeat;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     position: relative;
@@ -259,7 +276,9 @@
 
   /* ABOUT */
   #about {
-    background: var(--white);
+    background-color: var(--white);
+    background-image: var(--pattern-light);
+    background-repeat: repeat;
   }
 
   .about-grid {
@@ -354,7 +373,9 @@
 
   /* WHAT WE DO */
   #what-we-do {
-    background: var(--cream);
+    background-color: var(--cream);
+    background-image: var(--pattern-light);
+    background-repeat: repeat;
   }
 
   .services-grid {
@@ -407,7 +428,9 @@
 
   /* INTELLIGENCE SECTION */
   #intelligence {
-    background: var(--navy);
+    background-color: var(--navy);
+    background-image: var(--pattern-dark);
+    background-repeat: repeat;
     position: relative;
     overflow: hidden;
   }
@@ -584,7 +607,9 @@
 
   /* FUNDING */
   #funding {
-    background: var(--cream);
+    background-color: var(--cream);
+    background-image: var(--pattern-light);
+    background-repeat: repeat;
   }
 
   .funding-grid {
@@ -684,7 +709,9 @@
 
   /* LOCATIONS */
   #locations {
-    background: var(--white);
+    background-color: var(--white);
+    background-image: var(--pattern-light);
+    background-repeat: repeat;
   }
 
   .locations-row {
@@ -711,7 +738,9 @@
 
   /* APPLY */
   #apply {
-    background: var(--cream);
+    background-color: var(--cream);
+    background-image: var(--pattern-light);
+    background-repeat: repeat;
   }
 
   .apply-tabs {
@@ -1058,7 +1087,6 @@
   <div class="hero-actions">
     <a href="#apply" class="btn-primary" data-i18n="hero_apply">Apply as a Founder</a>
     <a href="#funding" class="btn-outline" data-i18n="hero_funding">Explore Funding</a>
-    <a href="#intelligence" class="btn-outline" data-i18n="hero_intel">Intelligence Engine ↗</a>
   </div>
 
   <div class="hero-stats">
@@ -1067,12 +1095,8 @@
       <span class="stat-label" data-i18n="stat_continents">Continents</span>
     </div>
     <div class="stat">
-      <span class="stat-num">8+</span>
+      <span class="stat-num">8</span>
       <span class="stat-label" data-i18n="stat_cities">Cities</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">10</span>
-      <span class="stat-label" data-i18n="stat_languages">Languages</span>
     </div>
     <div class="stat">
       <span class="stat-num">Pre-Seed</span>
@@ -1080,6 +1104,7 @@
     </div>
   </div>
 </section>
+<div class="zellige-divider"></div>
 
 <!-- ABOUT -->
 <section id="about">
@@ -1089,7 +1114,7 @@
         <div class="section-label" data-i18n="about_label">Who We Are</div>
         <h2 class="section-title" data-i18n="about_title">A transnational vision — spiritually, economically, intellectually</h2>
         <p class="section-body">
-          Founded by <strong>Anuraag Hooda</strong>, a Columbia University student who studied abroad in Rabat, Tangier, and Fez (Summer 2025), IndoRoccan connects founders, researchers, and institutions across India and Morocco. We believe the next wave of innovation will emerge from unexpected geographies — and this corridor is one of the most underexplored in the world.
+          Founded by <strong>Anuraag Hooda</strong>, a Columbia University graduate who studied abroad in Rabat, Tangier, and Fez (Summer 2025), IndoRoccan connects founders, researchers, and institutions across India and Morocco. We believe the next wave of innovation will emerge from unexpected geographies — and this corridor is one of the most underexplored in the world.
         </p>
         <div class="pill-row">
           <span class="pill">Education</span>
@@ -1104,7 +1129,11 @@
           <div class="team-info">
             <h3>Anuraag Hooda</h3>
             <div class="role">Founder & Director</div>
-            <p>Columbia University student who studied abroad in Morocco (Rabat, Tangier & Fez, Summer 2025), building transnational bridges across South Asia and North Africa through innovation, culture, and AI.</p>
+            <p>Columbia University graduate who studied abroad in Morocco (Rabat, Tangier & Fez, Summer 2025), building transnational bridges between India and Morocco — and, over time, across South Asia and North Africa — through innovation, culture, and AI.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:0.75rem;">
+              <a href="https://www.linkedin.com/in/anuraag-hooda" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;font-weight:600;color:var(--saffron);">Connect on LinkedIn ↗</a>
+              <a href="https://startups.columbia.edu/startups?permalink=indoroccan" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;font-weight:600;color:var(--saffron);">Columbia Startup Directory ↗</a>
+            </div>
           </div>
         </div>
 
@@ -1126,6 +1155,22 @@
           </div>
           <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 0.75rem;">Meet Indian & Moroccan students (and friends) at Columbia. Simple, welcoming, no RSVP needed.</div>
         </div>
+
+        <!-- Oct 2026 Casablanca travel note -->
+        <div style="background: var(--navy); border-radius: 16px; padding: 2rem; margin-top: 1.5rem; border: 1px solid rgba(255,255,255,0.08);">
+          <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--saffron); margin-bottom: 0.75rem;">On the Ground</div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">IndoRoccan in Casablanca</div>
+          <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">📅 Oct 22–25, 2026</div>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+            <div style="display: flex; flex-direction: column; background: white; border-radius: 6px; overflow: hidden; width: 48px; height: 30px;">
+              <div style="background: #FF9933; flex: 1;"></div>
+              <div style="background: white; flex: 1; display: flex; align-items: center; justify-content: center;"><span style="font-size: 8px;">🔵</span></div>
+              <div style="background: #138808; flex: 1;"></div>
+            </div>
+            <div style="background: #C1272D; border-radius: 6px; width: 48px; height: 30px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px;">★</div>
+          </div>
+          <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 0.75rem;">Founder Anuraag will be in Casablanca this week. Always glad to connect with founders, researchers, and friends of the India–Morocco corridor — reach out at <a href="mailto:hello@indoroccan.com" style="color: var(--saffron);">hello@indoroccan.com</a>.</div>
+        </div>
       </div>
 
       <div class="about-visual">
@@ -1141,12 +1186,13 @@
     </div>
   </div>
 </section>
+<div class="zellige-divider"></div>
 
 <!-- WHAT WE DO -->
 <section id="what-we-do">
   <div class="container">
     <div class="section-label" data-i18n="wwd_label">What We Do</div>
-    <h2 class="section-title" data-i18n="wwd_title">Six pillars of cross-regional innovation</h2>
+    <h2 class="section-title" data-i18n="wwd_title">Five pillars of cross-regional innovation</h2>
     <p class="section-body" data-i18n="wwd_body">From early-stage incubation to AI-powered intelligence, IndoRoccan provides the infrastructure for transnational ventures to take root and scale.</p>
 
     <div class="services-grid" style="margin-top: 3rem;">
@@ -1163,26 +1209,22 @@
       <div class="service-card fade-in">
         <div class="service-icon" style="background: rgba(26,92,56,0.1);">🎓</div>
         <h3 data-i18n="p3_title">Academic Exchanges</h3>
-        <p data-i18n="p3_body">Explore grant-funded academic and cultural exchanges connecting universities across South Asia and North Africa.</p>
+        <p data-i18n="p3_body">Explore grant-funded academic and cultural exchanges connecting universities across South Asia and North Africa, starting with India and Morocco.</p>
       </div>
       <div class="service-card fade-in">
         <div class="service-icon" style="background: rgba(212,168,67,0.1);">🤝</div>
         <h3 data-i18n="p4_title">Institutional Connections</h3>
-        <p data-i18n="p4_body">Connect founders, researchers, and institutions across continents — including embassies, IITs, and Moroccan universities.</p>
+        <p data-i18n="p4_body">Build toward a network of founders, researchers, and institutions across continents — with the goal of partnerships spanning embassies, IITs, and Moroccan universities.</p>
       </div>
       <div class="service-card fade-in">
         <div class="service-icon" style="background: rgba(11,27,58,0.08);">🤖</div>
         <h3 data-i18n="p5_title">AI Intelligence Engine</h3>
-        <p data-i18n="p5_body">Leverage AI to track India-Morocco signals across diplomacy, defense, trade, and startups in 10 languages.</p>
-      </div>
-      <div class="service-card fade-in">
-        <div class="service-icon" style="background: rgba(232,119,34,0.1);">💰</div>
-        <h3 data-i18n="p6_title">Funding Access</h3>
-        <p data-i18n="p6_body">Connect cross-border founders with pre-seed and seed capital, grant opportunities, and impact investors who care about emerging corridors.</p>
+        <p data-i18n="p5_body">Leverage AI to track India-Morocco signals across diplomacy, defense, trade, and startups in English, Hindi, French, and Darija.</p>
       </div>
     </div>
   </div>
 </section>
+<div class="zellige-divider"></div>
 
 <!-- INTELLIGENCE -->
 <section id="intelligence">
@@ -1191,20 +1233,14 @@
       <div>
         <div class="section-label" style="color: var(--saffron);" data-i18n="intel_label">AI Intelligence</div>
         <h2 class="section-title" style="color: white;" data-i18n="intel_title">IndoRoccan Intelligence Engine</h2>
-        <p class="section-body">
-          Our live, multilingual AI engine tracks India–Morocco signals across diplomacy, defense, trade, startups, and innovation — with citations from trusted sources in 10 languages.
+        <p class="section-body" id="intelIntroText">
+          Our live, multilingual AI engine tracks India–Morocco signals across diplomacy, defense, trade, startups, and innovation — with citations from trusted sources in English, Hindi, French, and Darija.
         </p>
         <div class="lang-badges">
           <span class="lang-badge">English</span>
           <span class="lang-badge">हिंदी</span>
           <span class="lang-badge">Français</span>
           <span class="lang-badge">دارجة</span>
-          <span class="lang-badge">اردو</span>
-          <span class="lang-badge">ਪੰਜਾਬੀ</span>
-          <span class="lang-badge">বাংলা</span>
-          <span class="lang-badge">தமிழ்</span>
-          <span class="lang-badge">తెలుగు</span>
-          <span class="lang-badge">मराठी</span>
         </div>
         <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
           <div style="font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Sources Include</div>
@@ -1232,18 +1268,8 @@
               <select class="intel-select" id="intelLang">
                 <option value="en">English</option>
                 <option value="fr">Français</option>
-                <optgroup label="─── Indian Languages ───">
                 <option value="hi">हिंदी (Hindi)</option>
-                <option value="mr">मराठी (Marathi)</option>
-                <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
-                <option value="bn">বাংলা (Bengali)</option>
-                <option value="ta">தமிழ் (Tamil)</option>
-                <option value="te">తెలుగు (Telugu)</option>
-                <option value="ur">اردو (Urdu)</option>
-                </optgroup>
-                <optgroup label="─── Moroccan / Regional ───">
                 <option value="ar-ma">دارجة (Darija)</option>
-                </optgroup>
               </select>
               <select class="intel-select" id="intelCount">
                 <option value="8">8 sources</option>
@@ -1284,6 +1310,7 @@
     </div>
   </div>
 </section>
+<div class="zellige-divider"></div>
 
 <!-- FUNDING -->
 <section id="funding">
@@ -1300,10 +1327,10 @@
         <div class="funding-range">Target raise · SAFE or equity</div>
         <ul class="funding-list">
           <li>Build full-stack intelligence platform</li>
-          <li>Hire cross-border team in Casablanca & Mumbai</li>
+          <li>Hire cross-border team in Casablanca & Haryana</li>
           <li>Launch first cohort of 5–8 portfolio companies</li>
-          <li>Establish embassy & university partnerships</li>
-          <li>Open physical presence in Rabat and New Delhi</li>
+          <li>Pursue embassy & university partnerships</li>
+          <li>Open physical presence in Rabat and Haryana</li>
         </ul>
         <button class="funding-cta" onclick="openInvestorModal()" data-i18n="btn_express">Express Interest →</button>
       </div>
@@ -1318,7 +1345,6 @@
           <li>Launch India–Morocco trade facilitation products</li>
           <li>AI intelligence platform commercialization</li>
           <li>Grant-funded academic exchange programs</li>
-          <li>Expand to Tunisia, Egypt, and Sri Lanka</li>
         </ul>
         <button class="funding-cta" onclick="smoothScrollTo('apply');setTimeout(function(){switchTabByName('partner')},400)" data-i18n="btn_partner">Partner With Us →</button>
       </div>
@@ -1346,6 +1372,7 @@
     </div>
   </div>
 </section>
+<div class="zellige-divider"></div>
 
 <!-- LOCATIONS -->
 <section id="locations">
@@ -1354,15 +1381,12 @@
       <div>
         <div class="section-label">Where We Work</div>
         <h2 class="section-title">Global incubator, grounded in local partnerships</h2>
-        <p class="section-body">We operate across 8+ cities spanning two continents — where founders live, where markets exist, where culture flows.</p>
+        <p class="section-body">We operate across 8 cities spanning two continents — where founders live, where markets exist, where culture flows.</p>
       </div>
       <div>
         <div style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); margin-bottom: 1rem;">India</div>
         <div class="locations-row" style="margin-top: 0; margin-bottom: 1.5rem;">
-          <div class="location-chip"><span class="loc-dot loc-india"></span>New Delhi</div>
-          <div class="location-chip"><span class="loc-dot loc-india"></span>Mumbai</div>
-          <div class="location-chip"><span class="loc-dot loc-india"></span>Bangalore</div>
-          <div class="location-chip"><span class="loc-dot loc-india"></span>Hyderabad</div>
+          <div class="location-chip"><span class="loc-dot loc-india"></span>Haryana</div>
         </div>
         <div style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); margin-bottom: 1rem;">Morocco</div>
         <div class="locations-row" style="margin-top: 0; margin-bottom: 1.5rem;">
@@ -1381,6 +1405,7 @@
     </div>
   </div>
 </section>
+<div class="zellige-divider"></div>
 
 <!-- APPLY -->
 <section id="apply">
@@ -1388,6 +1413,21 @@
     <div class="section-label" data-i18n="apply_label">Apply</div>
     <h2 class="section-title" data-i18n="apply_title">Join IndoRoccan</h2>
     <p class="section-body" data-i18n="apply_body">Applications are reviewed on a rolling basis. We welcome founders, investors, advisors, and institutional partners.</p>
+
+    <div style="background: var(--white); border-radius: 16px; padding: 1.75rem 2rem; margin: 1.75rem 0; border: 1px solid var(--border); display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+      <div>
+        <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--saffron); margin-bottom: 0.4rem;">Is this a fund?</div>
+        <p style="font-size: 0.85rem; color: var(--slate); line-height: 1.5;">No — IndoRoccan is an incubator and network, not a registered investment fund. We connect founders to mission-aligned capital and help structure the raise.</p>
+      </div>
+      <div>
+        <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--saffron); margin-bottom: 0.4rem;">Who should apply?</div>
+        <p style="font-size: 0.85rem; color: var(--slate); line-height: 1.5;">Early-stage founders building something with a real India or Morocco connection — product, team, market, or supply chain — at idea through seed stage.</p>
+      </div>
+      <div>
+        <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--saffron); margin-bottom: 0.4rem;">What's required?</div>
+        <p style="font-size: 0.85rem; color: var(--slate); line-height: 1.5;">Just the application below. No fee, no required equity to apply — terms, if any, are discussed individually once there's mutual fit.</p>
+      </div>
+    </div>
 
     <div class="apply-tabs">
       <button class="apply-tab active" onclick="switchTab('founder', this)" data-i18n="tab_founder">Apply as a Founder</button>
@@ -1411,147 +1451,14 @@
             <input type="text" class="form-input" name="fullName" required placeholder="Your full name">
           </div>
 
-          <div class="form-section-header">Location & Identity</div>
-
-          <div class="form-group">
-            <label class="form-label">Founder Base (Current Location) <span class="req">*</span></label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="founderBase" value="India" required> India</label>
-              <label class="form-radio"><input type="radio" name="founderBase" value="Morocco"> Morocco</label>
-              <label class="form-radio"><input type="radio" name="founderBase" value="United States"> United States</label>
-              <label class="form-radio"><input type="radio" name="founderBase" value="France"> France</label>
-              <label class="form-radio"><input type="radio" name="founderBase" value="Europe (other)"> Europe (other)</label>
-              <label class="form-radio"><input type="radio" name="founderBase" value="MENA (other)"> MENA (other)</label>
-              <label class="form-radio"><input type="radio" name="founderBase" value="Other"> Other</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Founder Affiliation (Strategic Identity) <span class="req">*</span></label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="affiliation" value="Indian founder (citizenship/origin/primary market)" required> Indian founder (citizenship / origin / primary market)</label>
-              <label class="form-radio"><input type="radio" name="affiliation" value="Moroccan founder"> Moroccan founder (citizenship / origin / primary market)</label>
-              <label class="form-radio"><input type="radio" name="affiliation" value="Indian diaspora (outside India)"> Indian diaspora (outside India)</label>
-              <label class="form-radio"><input type="radio" name="affiliation" value="Moroccan diaspora (outside Morocco)"> Moroccan diaspora (outside Morocco)</label>
-              <label class="form-radio"><input type="radio" name="affiliation" value="Non-Indian founder targeting India"> Non-Indian / Non-Moroccan founder targeting India</label>
-              <label class="form-radio"><input type="radio" name="affiliation" value="Non-Moroccan founder targeting Morocco"> Non-Indian / Non-Moroccan founder targeting Morocco</label>
-            </div>
-          </div>
-
-          <div class="form-section-header">Market & Sector</div>
-
-          <div class="form-group">
-            <label class="form-label">Primary Market Focus <span class="req">*</span></label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="marketFocus" value="India only" required> India only</label>
-              <label class="form-radio"><input type="radio" name="marketFocus" value="Morocco only"> Morocco only</label>
-              <label class="form-radio"><input type="radio" name="marketFocus" value="India → Morocco"> India → Morocco</label>
-              <label class="form-radio"><input type="radio" name="marketFocus" value="Morocco → India"> Morocco → India</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Primary Sector (select up to 2) <span class="req">*</span></label>
-            <div class="form-check-group">
-              <label class="form-check"><input type="checkbox" name="sector" value="Climate / Energy"> Climate / Energy</label>
-              <label class="form-check"><input type="checkbox" name="sector" value="Agritech / Food Systems"> Agritech / Food Systems</label>
-              <label class="form-check"><input type="checkbox" name="sector" value="Manufacturing / Supply Chain"> Manufacturing / Supply Chain</label>
-              <label class="form-check"><input type="checkbox" name="sector" value="Fintech"> Fintech</label>
-              <label class="form-check"><input type="checkbox" name="sector" value="Health / Biotech"> Health / Biotech</label>
-              <label class="form-check"><input type="checkbox" name="sector" value="AI / Deep Tech"> AI / Deep Tech</label>
-              <label class="form-check"><input type="checkbox" name="sector" value="Tourism / Trade / Culture"> Tourism / Trade / Culture</label>
-              <label class="form-check"><input type="checkbox" name="sector" value="Education"> Education</label>
-              <label class="form-check"><input type="checkbox" name="sector" value="Other"> Other</label>
-            </div>
-          </div>
-
-          <div class="form-section-header">Company Stage & Ask</div>
-
-          <div class="form-group">
-            <label class="form-label">Current Company Stage <span class="req">*</span></label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="stage" value="Idea / research" required> Idea / research</label>
-              <label class="form-radio"><input type="radio" name="stage" value="MVP built"> MVP built</label>
-              <label class="form-radio"><input type="radio" name="stage" value="Pilot users or LOIs"> Pilot users or LOIs</label>
-              <label class="form-radio"><input type="radio" name="stage" value="Revenue-generating"> Revenue-generating</label>
-              <label class="form-radio"><input type="radio" name="stage" value="Scaling / expansion"> Scaling / expansion</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Primary Ask <span class="req">*</span></label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="primaryAsk" value="Capital" required> Capital</label>
-              <label class="form-radio"><input type="radio" name="primaryAsk" value="Strategic partner"> Strategic partner</label>
-              <label class="form-radio"><input type="radio" name="primaryAsk" value="Pilot / customer"> Pilot / customer</label>
-              <label class="form-radio"><input type="radio" name="primaryAsk" value="Advisor / mentor"> Advisor / mentor</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Capital Ask Size (if applicable)</label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="capitalAsk" value="<$100k"> &lt;$100k</label>
-              <label class="form-radio"><input type="radio" name="capitalAsk" value="$100k-$500k"> $100k–$500k</label>
-              <label class="form-radio"><input type="radio" name="capitalAsk" value="$500k-$1.5M"> $500k–$1.5M</label>
-              <label class="form-radio"><input type="radio" name="capitalAsk" value="$1.5M+"> $1.5M+</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Cross-border Readiness <span class="req">*</span></label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="crossBorder" value="No local partner identified" required> No local partner identified</label>
-              <label class="form-radio"><input type="radio" name="crossBorder" value="Conversations started"> Conversations started</label>
-              <label class="form-radio"><input type="radio" name="crossBorder" value="Local advisor or pilot partner"> Local advisor or pilot partner</label>
-              <label class="form-radio"><input type="radio" name="crossBorder" value="Entity / legal structure planned or live"> Entity / legal structure planned or live</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Regulatory Exposure <span class="req">*</span></label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="regulatory" value="Low (software / services)" required> Low (software / services)</label>
-              <label class="form-radio"><input type="radio" name="regulatory" value="Medium (data, fintech, health-adjacent)"> Medium (data, fintech, health-adjacent)</label>
-              <label class="form-radio"><input type="radio" name="regulatory" value="High (energy, infrastructure, regulated finance)"> High (energy, infrastructure, regulated finance)</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Founder Commitment <span class="req">*</span></label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="commitment" value="Exploring / part-time" required> Exploring / part-time</label>
-              <label class="form-radio"><input type="radio" name="commitment" value="Full-time founder"> Full-time founder</label>
-              <label class="form-radio"><input type="radio" name="commitment" value="Full-time with team"> Full-time with team</label>
-              <label class="form-radio"><input type="radio" name="commitment" value="Previously exited founder"> Previously exited founder</label>
-            </div>
-          </div>
-
           <div class="form-group form-full">
-            <label class="form-label">One-sentence Market Description (max 120 chars) <span class="req">*</span></label>
+            <label class="form-label">What are you building? <span class="req">*</span></label>
             <input type="text" class="form-input" name="marketDesc" maxlength="120" required placeholder="e.g. AI-powered logistics connecting Indian manufacturers with Moroccan distributors">
           </div>
 
           <div class="form-group form-full">
-            <label class="form-label">Which Cities Are Most Relevant?</label>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-              <label class="form-check"><input type="checkbox" name="cities" value="Mumbai (India)"> Mumbai</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Bangalore (India)"> Bangalore</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Delhi NCR (India)"> Delhi NCR</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Hyderabad (India)"> Hyderabad</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Chennai (India)"> Chennai</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Casablanca (Morocco)"> Casablanca</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Rabat (Morocco)"> Rabat</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Tangier (Morocco)"> Tangier</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Marrakech (Morocco)"> Marrakech</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Agadir (Morocco)"> Agadir</label>
-            
-              <label class="form-check"><input type="checkbox" name="cities" value="Pune (India)"> Pune</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Ahmedabad (India)"> Ahmedabad</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Other (India)"> Other (India)</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Other (Morocco)"> Other (Morocco)</label>
-              <label class="form-check"><input type="checkbox" name="cities" value="Other (outside India/Morocco)"> Other (outside India/Morocco)</label>
-            </div>
+            <label class="form-label">Tell us more &mdash; stage, what you're looking for, India/Morocco connection, anything else relevant <span class="req">*</span></label>
+            <textarea class="form-textarea" name="details" rows="5" required placeholder="A few sentences is plenty."></textarea>
           </div>
         </div>
         <button type="submit" class="form-submit" id="founderSubmitBtn">Submit Application →</button>
@@ -1628,7 +1535,7 @@
       <div style="margin-top: 1.5rem; font-size: 0.875rem;">
         <a href="mailto:hello@indoroccan.com">hello@indoroccan.com</a>
       </div>
-      <div style="margin-top: 0.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.4);">📍 New York · Casablanca · New Delhi</div>
+      <div style="margin-top: 0.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.4);">📍 New York · Casablanca · Haryana</div>
     </div>
     <div class="footer-col">
       <h4>Navigate</h4>
@@ -1711,15 +1618,14 @@ var TRANSLATIONS = {
     stat_continents:'Continents', stat_cities:'Cities', stat_languages:'Languages', stat_stage:'Stage',
     about_label:'Who We Are',
     about_title:'A transnational vision \u2014 spiritually, economically, intellectually',
-    wwd_label:'What We Do', wwd_title:'Six pillars of cross-regional innovation',
+    wwd_label:'What We Do', wwd_title:'Five pillars of cross-regional innovation',
     wwd_body:'From early-stage incubation to AI-powered intelligence, IndoRoccan provides the infrastructure for transnational ventures to take root and scale.',
     p1_title:'Startup Incubation', p1_body:'Incubate early ideas and cross-regional startups at the intersection of Indian and Moroccan markets, from idea through MVP.',
     p2_title:'Diaspora Ventures', p2_body:'Support diaspora-led ventures and student innovators who have roots in both ecosystems or seek to bridge them.',
-    p3_title:'Academic Exchanges', p3_body:'Explore grant-funded academic and cultural exchanges connecting universities across South Asia and North Africa.',
-    p4_title:'Institutional Connections', p4_body:'Connect founders, researchers, and institutions across continents \u2014 including embassies, IITs, and Moroccan universities.',
-    p5_title:'AI Intelligence Engine', p5_body:'Leverage AI to track India-Morocco signals across diplomacy, defense, trade, and startups in 10 languages.',
-    p6_title:'Funding Access', p6_body:'Connect cross-border founders with pre-seed and seed capital, grant opportunities, and impact investors who care about emerging corridors.',
-    intel_label:'AI Intelligence', intel_title:'IndoRoccan Intelligence Engine', intel_try:'Try asking:',
+    p3_title:'Academic Exchanges', p3_body:'Explore grant-funded academic and cultural exchanges connecting universities across South Asia and North Africa, starting with India and Morocco.',
+    p4_title:'Institutional Connections', p4_body:'Build toward a network of founders, researchers, and institutions across continents \u2014 with the goal of partnerships spanning embassies, IITs, and Moroccan universities.',
+    p5_title:'AI Intelligence Engine', p5_body:'Leverage AI to track India-Morocco signals across diplomacy, defense, trade, and startups in English, Hindi, French, and Darija.',
+        intel_label:'AI Intelligence', intel_title:'IndoRoccan Intelligence Engine', intel_try:'Try asking:',
     fund_label:'Investment', fund_title:"We're raising to go further, faster",
     apply_label:'Apply', apply_title:'Join IndoRoccan',
     apply_body:'Applications are reviewed on a rolling basis. We welcome founders, investors, advisors, and institutional partners.',
@@ -1736,15 +1642,14 @@ var TRANSLATIONS = {
     stat_continents:'Continents', stat_cities:'Villes', stat_languages:'Langues', stat_stage:'Étape',
     about_label:'Qui sommes-nous',
     about_title:'Une vision transnationale \u2014 spirituellement, économiquement, intellectuellement',
-    wwd_label:'Ce que nous faisons', wwd_title:'Six piliers de l\u2019innovation inter-régionale',
+    wwd_label:'Ce que nous faisons', wwd_title:'Cinq piliers de l\u2019innovation inter-régionale',
     wwd_body:'De l\u2019incubation précoce à l\u2019intelligence IA, IndoRoccan fournit l\u2019infrastructure pour que les ventures transnationales s\u2019enracinent et se développent.',
     p1_title:'Incubation de startups', p1_body:'Incuber des idées et des startups inter-régionales à l\u2019intersection des marchés indien et marocain, de l\u2019idée au MVP.',
     p2_title:'Ventures diaspora', p2_body:'Soutenir les ventures menées par la diaspora et les innovateurs étudiants qui ont des racines dans les deux écosystèmes.',
-    p3_title:'Échanges académiques', p3_body:'Explorer des échanges académiques et culturels financés par des subventions reliant des universités d\u2019Asie du Sud et d\u2019Afrique du Nord.',
+    p3_title:'Échanges académiques', p3_body:'Explorer des échanges académiques et culturels financés par des subventions reliant des universités d\u2019Asie du Sud et d\u2019Afrique du Nord, en commençant par l\u2019Inde et le Maroc.',
     p4_title:'Connexions institutionnelles', p4_body:'Relier les fondateurs, chercheurs et institutions \u2014 ambassades, IITs et universités marocaines.',
     p5_title:'Moteur de renseignement IA', p5_body:'Utiliser l\u2019IA pour suivre les signaux Inde-Maroc en diplomatie, défense, commerce et startups en 10 langues.',
-    p6_title:'Accès au financement', p6_body:'Connecter les fondateurs transfrontaliers avec du capital d\u2019amorçage, des subventions et des investisseurs d\u2019impact.',
-    intel_label:'Intelligence IA', intel_title:'Moteur d\u2019intelligence IndoRoccan', intel_try:'Essayez de demander\u00a0:',
+        intel_label:'Intelligence IA', intel_title:'Moteur d\u2019intelligence IndoRoccan', intel_try:'Essayez de demander\u00a0:',
     fund_label:'Investissement', fund_title:'Nous levons des fonds pour aller plus loin, plus vite',
     apply_label:'Postuler', apply_title:'Rejoindre IndoRoccan',
     apply_body:'Les candidatures sont examinées en continu. Nous accueillons les fondateurs, investisseurs, conseillers et partenaires institutionnels.',
@@ -1761,15 +1666,14 @@ var TRANSLATIONS = {
     stat_continents:'\u092e\u0939\u093e\u0926\u094d\u0935\u0940\u092a', stat_cities:'\u0936\u0939\u0930', stat_languages:'\u092d\u093e\u0937\u093e\u090f\u0902', stat_stage:'\u091a\u0930\u0923',
     about_label:'\u0939\u092e \u0915\u094c\u0928 \u0939\u0948\u0902',
     about_title:'\u090f\u0915 \u0905\u0928\u094d\u0924\u0930\u0930\u093e\u0937\u094d\u091f\u094d\u0930\u0940\u092f \u0926\u0943\u0937\u094d\u091f\u093f \u2014 \u0906\u0927\u094d\u092f\u093e\u0924\u094d\u092e\u093f\u0915, \u0906\u0930\u094d\u0925\u093f\u0915 \u0914\u0930 \u092c\u094c\u0926\u094d\u0927\u093f\u0915 \u0930\u0942\u092a \u0938\u0947',
-    wwd_label:'\u0939\u092e \u0915\u094d\u092f\u093e \u0915\u0930\u0924\u0947 \u0939\u0948\u0902', wwd_title:'\u0905\u0902\u0924\u0930-\u0915\u094d\u0937\u0947\u0924\u094d\u0930\u0940\u092f \u0928\u0935\u093e\u091a\u093e\u0930 \u0915\u0947 \u091b\u0939 \u0938\u094d\u0924\u0902\u092d',
+    wwd_label:'\u0939\u092e \u0915\u094d\u092f\u093e \u0915\u0930\u0924\u0947 \u0939\u0948\u0902', wwd_title:'\u0905\u0902\u0924\u0930-\u0915\u094d\u0937\u0947\u0924\u094d\u0930\u0940\u092f \u0928\u0935\u093e\u091a\u093e\u0930 \u0915\u0947 \u092a\u093e\u0902\u091a \u0938\u094d\u0924\u0902\u092d',
     wwd_body:'\u0936\u0941\u0930\u0941\u0906\u0924\u0940 \u0907\u0928\u0915\u094d\u092f\u0942\u092c\u0947\u0936\u0928 \u0938\u0947 AI \u0907\u0902\u091f\u0947\u0932\u093f\u091c\u0947\u0902\u0938 \u0924\u0915, IndoRoccan \u0905\u0902\u0924\u0930\u0930\u093e\u0937\u094d\u091f\u094d\u0930\u0940\u092f \u0909\u0926\u094d\u092f\u092e\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u0906\u0927\u093e\u0930\u092d\u0942\u0924 \u0922\u093e\u0901\u091a\u093e \u092a\u094d\u0930\u0926\u093e\u0928 \u0915\u0930\u0924\u093e \u0939\u0948\u0964',
     p1_title:'\u0938\u094d\u091f\u093e\u0930\u094d\u091f\u0905\u092a \u0907\u0928\u0915\u094d\u092f\u0942\u092c\u0947\u0936\u0928', p1_body:'\u092d\u093e\u0930\u0924\u0940\u092f \u0914\u0930 \u092e\u094b\u0930\u0915\u094d\u0915\u094b \u0915\u0947 \u092c\u093e\u091c\u093e\u0930\u094b\u0902 \u0915\u0947 \u091a\u094c\u0930\u093e\u0939\u0947 \u092a\u0930 \u0905\u0902\u0924\u0930-\u0915\u094d\u0937\u0947\u0924\u094d\u0930\u0940\u092f \u0938\u094d\u091f\u093e\u0930\u094d\u091f\u0905\u092a \u0915\u094b \u0935\u093f\u091a\u093e\u0930 \u0938\u0947 MVP \u0924\u0915 \u0932\u0947 \u091c\u093e\u090f\u0902\u0964',
     p2_title:'\u092a\u094d\u0930\u0935\u093e\u0938\u0940 \u0909\u0926\u094d\u092f\u092e', p2_body:'\u092a\u094d\u0930\u0935\u093e\u0938\u0940 \u0928\u0947\u0924\u0943\u0924\u094d\u0935 \u0935\u093e\u0932\u0947 \u0909\u0926\u094d\u092f\u092e\u094b\u0902 \u0914\u0930 \u091b\u093e\u0924\u094d\u0930 \u0928\u0935\u092a\u094d\u0930\u0935\u0930\u094d\u0924\u0915\u094b\u0902 \u0915\u093e \u0938\u092e\u0930\u094d\u0925\u0928 \u0915\u0930\u0947\u0902\u0964',
     p3_title:'\u0936\u0948\u0915\u094d\u0937\u093f\u0915 \u0906\u0926\u093e\u0928-\u092a\u094d\u0930\u0926\u093e\u0928', p3_body:'\u0926\u0915\u094d\u0937\u093f\u0923 \u090f\u0936\u093f\u092f\u093e \u0914\u0930 \u0909\u0924\u094d\u0924\u0930\u0940 \u0905\u092b\u094d\u0930\u0940\u0915\u093e \u0915\u0947 \u0935\u093f\u0936\u094d\u0935\u0935\u093f\u0926\u094d\u092f\u093e\u0932\u092f\u094b\u0902 \u0915\u094b \u091c\u094b\u0921\u093c\u0928\u0947 \u0935\u093e\u0932\u0947 \u0905\u0928\u0941\u0926\u093e\u0928-\u092a\u094d\u0930\u093e\u092a\u094d\u0924 \u0936\u0948\u0915\u094d\u0937\u093f\u0915 \u0914\u0930 \u0938\u093e\u0902\u0938\u094d\u0915\u0943\u0924\u093f\u0915 \u0906\u0926\u093e\u0928-\u092a\u094d\u0930\u0926\u093e\u0928 \u0915\u0940 \u0916\u094b\u091c \u0915\u0930\u0947\u0902\u0964',
     p4_title:'\u0938\u0902\u0938\u094d\u0925\u093e\u0917\u0924 \u0938\u0902\u092a\u0930\u094d\u0915', p4_body:'\u0938\u0902\u0938\u094d\u0925\u093e\u092a\u0915\u094b\u0902, \u0936\u094b\u0927\u0915\u0930\u094d\u0924\u093e\u0913\u0902 \u0914\u0930 \u0938\u0902\u0938\u094d\u0925\u093e\u0928\u094b\u0902 \u2014 \u0926\u0942\u0924\u093e\u0935\u093e\u0938, IIT \u0914\u0930 \u092e\u094b\u0930\u0915\u094d\u0915\u094b \u0935\u093f\u0936\u094d\u0935\u0935\u093f\u0926\u094d\u092f\u093e\u0932\u092f\u094b\u0902 \u0915\u094b \u091c\u094b\u0921\u093c\u0947\u0902\u0964',
     p5_title:'AI \u0907\u0902\u091f\u0947\u0932\u093f\u091c\u0947\u0902\u0938 \u0907\u0902\u091c\u0928', p5_body:'\u0915\u0942\u091f\u0928\u0940\u0924\u093f, \u0930\u0915\u094d\u0937\u093e, \u0935\u094d\u092f\u093e\u092a\u093e\u0930 \u0914\u0930 \u0938\u094d\u091f\u093e\u0930\u094d\u091f\u0905\u092a \u092e\u0947\u0902 \u092d\u093e\u0930\u0924-\u092e\u094b\u0930\u0915\u094d\u0915\u094b \u0938\u0902\u0915\u0947\u0924\u094b\u0902 \u0915\u094b 10 \u092d\u093e\u0937\u093e\u0913\u0902 \u092e\u0947\u0902 \u091f\u094d\u0930\u0948\u0915 \u0915\u0930\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f AI \u0915\u093e \u0909\u092a\u092f\u094b\u0917 \u0915\u0930\u0947\u0902\u0964',
-    p6_title:'\u092b\u0902\u0921\u093f\u0902\u0917 \u0924\u0915 \u092a\u0939\u0941\u0902\u091a', p6_body:'\u0905\u0902\u0924\u0930-\u0938\u0940\u092e\u093e \u0938\u0902\u0938\u094d\u0925\u093e\u092a\u0915\u094b\u0902 \u0915\u094b \u092a\u094d\u0930\u0940-\u0938\u0940\u0921 \u0914\u0930 \u0938\u0940\u0921 \u092a\u0942\u0902\u091c\u0940, \u0905\u0928\u0941\u0926\u093e\u0928 \u0914\u0930 \u092a\u094d\u0930\u092d\u093e\u0935-\u0928\u093f\u0935\u0947\u0936\u0915\u094b\u0902 \u0938\u0947 \u091c\u094b\u0921\u093c\u0947\u0902\u0964',
-    intel_label:'AI \u0907\u0902\u091f\u0947\u0932\u093f\u091c\u0947\u0902\u0938', intel_title:'IndoRoccan \u0907\u0902\u091f\u0947\u0932\u093f\u091c\u0947\u0902\u0938 \u0907\u0902\u091c\u0928', intel_try:'\u092a\u0942\u091b\u0915\u0930 \u0926\u0947\u0916\u0947\u0902:',
+        intel_label:'AI \u0907\u0902\u091f\u0947\u0932\u093f\u091c\u0947\u0902\u0938', intel_title:'IndoRoccan \u0907\u0902\u091f\u0947\u0932\u093f\u091c\u0947\u0902\u0938 \u0907\u0902\u091c\u0928', intel_try:'\u092a\u0942\u091b\u0915\u0930 \u0926\u0947\u0916\u0947\u0902:',
     fund_label:'\u0928\u093f\u0935\u0947\u0936', fund_title:'\u0939\u092e \u0914\u0930 \u0906\u0917\u0947 \u091c\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u092b\u0902\u0921\u093f\u0902\u0917 \u091c\u0941\u091f\u093e \u0930\u0939\u0947 \u0939\u0948\u0902',
     apply_label:'\u0906\u0935\u0947\u0926\u0928', apply_title:'IndoRoccan \u0938\u0947 \u091c\u0941\u0921\u093c\u0947\u0902',
     apply_body:'\u0906\u0935\u0947\u0926\u0928\u094b\u0902 \u0915\u0940 \u0938\u092e\u0940\u0915\u094d\u0937\u093e \u0928\u093f\u0930\u0902\u0924\u0930 \u0906\u0927\u093e\u0930 \u092a\u0930 \u0939\u094b\u0924\u0940 \u0939\u0948\u0964 \u0939\u092e \u0938\u0902\u0938\u094d\u0925\u093e\u092a\u0915\u094b\u0902, \u0928\u093f\u0935\u0947\u0936\u0915\u094b\u0902, \u0938\u0932\u093e\u0939\u0915\u093e\u0930\u094b\u0902 \u0914\u0930 \u0938\u0902\u0938\u094d\u0925\u093e\u0917\u0924 \u092d\u093e\u0917\u0940\u0926\u093e\u0930\u094b\u0902 \u0915\u093e \u0938\u094d\u0935\u093e\u0917\u0924 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964',
@@ -1786,15 +1690,14 @@ var TRANSLATIONS = {
     stat_continents:'\u0642\u0627\u0631\u0651\u0627\u062a', stat_cities:'\u0645\u062f\u0646', stat_languages:'\u0644\u063a\u0627\u062a', stat_stage:'\u0627\u0644\u0645\u0631\u062d\u0644\u0629',
     about_label:'\u0645\u0646 \u0646\u062d\u0646',
     about_title:'\u0631\u0624\u064a\u0629 \u0639\u0627\u0628\u0631\u0629 \u0644\u0644\u062d\u062f\u0648\u062f \u2014 \u0631\u0648\u062d\u064a\u0629 \u0648\u0627\u0642\u062a\u0635\u0627\u062f\u064a\u0629 \u0648\u0641\u0643\u0631\u064a\u0629',
-    wwd_label:'\u0645\u0627\u0630\u0627 \u0646\u0641\u0639\u0644', wwd_title:'\u0633\u062a\u0629 \u0631\u0643\u0627\u0626\u0632 \u0644\u0644\u0627\u0628\u062a\u0643\u0627\u0631 \u0627\u0644\u0639\u0627\u0628\u0631 \u0644\u0644\u062d\u062f\u0648\u062f',
+    wwd_label:'\u0645\u0627\u0630\u0627 \u0646\u0641\u0639\u0644', wwd_title:'\u062e\u0645\u0633\u0629 \u0631\u0643\u0627\u0626\u0632 \u0644\u0644\u0627\u0628\u062a\u0643\u0627\u0631 \u0627\u0644\u0639\u0627\u0628\u0631 \u0644\u0644\u062d\u062f\u0648\u062f',
     wwd_body:'\u0645\u0646 \u0627\u0644\u062a\u062d\u0636\u064a\u0646 \u0627\u0644\u0645\u0628\u0643\u0631 \u0625\u0644\u0649 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a\u060c \u062a\u0648\u0641\u0651\u0631 IndoRoccan \u0627\u0644\u0628\u0646\u064a\u0629 \u0627\u0644\u062a\u062d\u062a\u064a\u0629 \u0644\u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0639\u0627\u0628\u0631\u0629 \u0627\u0644\u062d\u062f\u0648\u062f.',
     p1_title:'\u062d\u0627\u0636\u0646\u0629 \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0627\u0644\u0646\u0627\u0634\u0626\u0629', p1_body:'\u062a\u062d\u0636\u064a\u0646 \u0627\u0644\u0623\u0641\u0643\u0627\u0631 \u0648\u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0639\u0628\u0631 \u0627\u0644\u062d\u062f\u0648\u062f \u0639\u0646\u062f \u062a\u0642\u0627\u0637\u0639 \u0627\u0644\u0633\u0648\u0642\u064a\u0646 \u0627\u0644\u0647\u0646\u062f\u064a \u0648\u0627\u0644\u0645\u063a\u0631\u0628\u064a.',
     p2_title:'\u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u0645\u063a\u062a\u0631\u0628\u064a\u0646', p2_body:'\u062f\u0639\u0645 \u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u0645\u063a\u062a\u0631\u0628\u064a\u0646 \u0648\u0627\u0644\u0637\u0644\u0627\u0628 \u0627\u0644\u0645\u0628\u062a\u0643\u0631\u064a\u0646.',
     p3_title:'\u0627\u0644\u062a\u0628\u0627\u062f\u0644\u0627\u062a \u0627\u0644\u0623\u0643\u0627\u062f\u064a\u0645\u064a\u0629', p3_body:'\u0627\u0633\u062a\u0643\u0634\u0627\u0641 \u062a\u0628\u0627\u062f\u0644\u0627\u062a \u0623\u0643\u0627\u062f\u064a\u0645\u064a\u0629 \u0648\u062b\u0642\u0627\u0641\u064a\u0629 \u062a\u0631\u0628\u0637 \u062c\u0627\u0645\u0639\u0627\u062a \u062c\u0646\u0648\u0628 \u0622\u0633\u064a\u0627 \u0648\u0634\u0645\u0627\u0644 \u0623\u0641\u0631\u064a\u0642\u064a\u0627.',
     p4_title:'\u0627\u0644\u0631\u0648\u0627\u0628\u0637 \u0627\u0644\u0645\u0624\u0633\u0633\u064a\u0629', p4_body:'\u062a\u0648\u0635\u064a\u0644 \u0627\u0644\u0645\u0624\u0633\u0633\u064a\u0646 \u0648\u0627\u0644\u0628\u0627\u062d\u062b\u064a\u0646 \u0648\u0627\u0644\u0645\u0624\u0633\u0633\u0627\u062a \u2014 \u0627\u0644\u0633\u0641\u0627\u0631\u0627\u062a \u0648\u0645\u0639\u0627\u0647\u062f \u0627\u0644\u062a\u0642\u0646\u064a\u0629 \u0648\u0627\u0644\u062c\u0627\u0645\u0639\u0627\u062a \u0627\u0644\u0645\u063a\u0631\u0628\u064a\u0629.',
     p5_title:'\u0645\u062d\u0631\u0643 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a', p5_body:'\u062a\u062a\u0628\u0639 \u0625\u0634\u0627\u0631\u0627\u062a \u0627\u0644\u0647\u0646\u062f\u2013\u0627\u0644\u0645\u063a\u0631\u0628 \u0641\u064a \u0627\u0644\u062f\u0628\u0644\u0648\u0645\u0627\u0633\u064a\u0629 \u0648\u0627\u0644\u062a\u062c\u0627\u0631\u0629 \u0628\u0639\u0634\u0631 \u0644\u063a\u0627\u062a.',
-    p6_title:'\u0627\u0644\u0648\u0635\u0648\u0644 \u0625\u0644\u0649 \u0627\u0644\u062a\u0645\u0648\u064a\u0644', p6_body:'\u0631\u0628\u0637 \u0627\u0644\u0645\u0624\u0633\u0633\u064a\u0646 \u0639\u0628\u0631 \u0627\u0644\u062d\u062f\u0648\u062f \u0628\u0631\u0623\u0633 \u0627\u0644\u0645\u0627\u0644 \u0648\u0627\u0644\u0645\u0646\u062d \u0648\u0627\u0644\u0645\u0633\u062a\u062b\u0645\u0631\u064a\u0646.',
-    intel_label:'\u0630\u0643\u0627\u0621 \u0627\u0635\u0637\u0646\u0627\u0639\u064a', intel_title:'\u0645\u062d\u0631\u0643 \u0630\u0643\u0627\u0621 IndoRoccan', intel_try:'\u062c\u0631\u0651\u0628 \u0623\u0646 \u062a\u0633\u0623\u0644:',
+        intel_label:'\u0630\u0643\u0627\u0621 \u0627\u0635\u0637\u0646\u0627\u0639\u064a', intel_title:'\u0645\u062d\u0631\u0643 \u0630\u0643\u0627\u0621 IndoRoccan', intel_try:'\u062c\u0631\u0651\u0628 \u0623\u0646 \u062a\u0633\u0623\u0644:',
     fund_label:'\u0627\u0633\u062a\u062b\u0645\u0627\u0631', fund_title:'\u0646\u062c\u0645\u0639 \u062a\u0645\u0648\u064a\u0644\u0627\u064b \u0644\u0644\u0645\u0636\u064a \u0623\u0628\u0639\u062f \u0648\u0623\u0633\u0631\u0639',
     apply_label:'\u0627\u0646\u0636\u0645\u0645', apply_title:'\u0627\u0646\u0636\u0645\u0651 \u0625\u0644\u0649 IndoRoccan',
     apply_body:'\u062a\u064f\u0631\u0627\u062c\u0639 \u0627\u0644\u0637\u0644\u0628\u0627\u062a \u0628\u0627\u0633\u062a\u0645\u0631\u0627\u0631. \u0646\u0631\u062d\u0651\u0628 \u0628\u0627\u0644\u0645\u0624\u0633\u0633\u064a\u0646 \u0648\u0627\u0644\u0645\u0633\u062a\u062b\u0645\u0631\u064a\u0646 \u0648\u0627\u0644\u0645\u0633\u062a\u0634\u0627\u0631\u064a\u0646 \u0648\u0627\u0644\u0634\u0631\u0643\u0627\u0621.',
@@ -1863,7 +1766,7 @@ async function askIntelligence(){
       document.getElementById('intelLoading').style.display='none';
       document.getElementById('intelAsk').disabled=false;
       var resultEl = document.getElementById('intelResult');
-      resultEl.innerHTML = '<div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#E87722;margin-bottom:0.5rem;font-weight:700;">Answer</div><div style="line-height:1.6;">The Intelligence Engine is temporarily undergoing scheduled maintenance and will be back online shortly. In the meantime, feel free to reach out directly at <a href="mailto:hello@indoroccan.com" style="color:#E87722;">hello@indoroccan.com</a> with any questions about India\u2013Morocco developments.</div>';
+      resultEl.innerHTML = '<div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#E87722;margin-bottom:0.5rem;font-weight:700;">Under Maintenance</div><div style="line-height:1.6;">This feature is temporarily offline. Reach us directly at <a href="mailto:hello@indoroccan.com" style="color:#E87722;">hello@indoroccan.com</a>.</div>';
       resultEl.classList.add('show');
     }, 700);
     return;
@@ -1875,7 +1778,7 @@ async function askIntelligence(){
   document.getElementById('intelLoading').style.display='flex';
   document.getElementById('intelResult').classList.remove('show');
 
-  var langNames={'en':'English','fr':'French','hi':'Hindi','mr':'Marathi','pa':'Punjabi','bn':'Bengali','ta':'Tamil','te':'Telugu','ar-ma':'Moroccan Arabic (Darija)','ur':'Urdu'};
+  var langNames={'en':'English','fr':'French','hi':'Hindi','ar-ma':'Moroccan Arabic (Darija)'};
   var systemPrompt='You are IndoRoccan Intelligence, a multilingual AI specialist in India-Morocco diplomatic, economic, trade, defense, startup, and innovation signals. Answer comprehensively with current knowledge. Respond in '+(langNames[lang]||'English')+'. Provide '+count+' numbered citations at the end formatted as: [N] Source \u2014 Headline. Prioritize: NDTV, The Hindu, Morocco World News, Hespress, Le360, TelQuel, Aaj Tak, 2M TV, Maroc Diplomatique, The Defense Post. Structure your response with: (1) main answer, (2) key recent developments, (3) "### What to monitor:" section.';
 
   try {
@@ -1948,6 +1851,12 @@ async function askIntelligence(){
 document.addEventListener('DOMContentLoaded',function(){
   var ta=document.getElementById('intelQuery');
   if(ta)ta.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();askIntelligence();}});
+  if(INTEL_MAINTENANCE_MODE){
+    var note=document.querySelector('.intel-sources-note');
+    if(note)note.textContent='This feature is temporarily under maintenance.';
+    var intro=document.getElementById('intelIntroText');
+    if(intro)intro.textContent='Our multilingual AI engine tracks India\u2013Morocco signals across diplomacy, defense, trade, startups, and innovation \u2014 with citations from trusted sources in English, Hindi, French, and Darija. (Currently under maintenance.)';
+  }
 });
 
 
